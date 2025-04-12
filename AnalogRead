@@ -1,0 +1,20 @@
+
+int lastSensorValue = -1; //Initialisation à une valeur impossible pour le potentiomètre (entre 0 et 1023)
+
+
+void setup()
+{
+  Serial.begin(9600); //Configuration de la vitessen de transmission en baud
+}
+
+void loop()
+{
+  int SensorValue = analogRead(A5); // SensorValue correspond à la valeur de la résistance envoyé sur la borne A5 entre 0 et 1023
+  if(SensorValue != lastSensorValue) // Si la valeur SensorValue est différente de lastSensorValue
+  {
+    Serial.println(SensorValue);   // Affiche la valeur de SensorValue
+    lastSensorValue = SensorValue; // Affecte la dernière valeur sur la variable lastSensorValue
+  }
+ 
+delay(10); //Délais permettant de ne pas saturer le moniteur série
+}
