@@ -1,0 +1,14 @@
+int pushbutton = 2; // pin du bouton
+
+void setup()
+{
+  Serial.begin(9600); 
+  pinMode(pushbutton,INPUT);
+}
+
+void loop()
+{
+  int sensorvalue = digitalRead(pushbutton); // sensorvalue correspond à la valeur lue par le pin 2
+  Serial.println(sensorvalue);
+  delay(1000);
+}
