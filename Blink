@@ -1,7 +1,6 @@
 
 void setup()
 {
-  Serial.begin(9600);
   pinMode(13,OUTPUT); //Configure le pin 13 en SORTIE
 }
 
