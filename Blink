@@ -1,0 +1,14 @@
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(13,OUTPUT); //Configure le pin 13 en SORTIE
+}
+
+void loop()
+{
+  digitalWrite(13,HIGH);  //Positionne le pin 13 à 1
+  delay(800);             //Délais pour pouvoir voir le changement d'état
+  digitalWrite(13,LOW);   //Positionne le pin 13 à 0
+  delay(800);             //Délais pour pouvoir voir le changement d'état
+}
